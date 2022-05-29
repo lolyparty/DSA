@@ -7,8 +7,8 @@ var reverseWords = function(s) {
     let newString = []
     for(let i = 0; i < newArr.length; i++){
         if(newArr[i] !== ""){
-            newString.push(newArr[i])
+            newString = `${newString} ${newArr[i]}`
         }
     }
-    return newString.join(" ")
+    return newString.trim()
 };
