@@ -1,2 +1,2 @@
 # DSA
-Solutions to data structure and algorithm questions on leetcode
+Solutions to data structures and algorithms questions on leetcode
