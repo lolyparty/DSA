@@ -20,6 +20,7 @@ var reverseStr = function(s, k) {
     }
 
     for(let j = 0; j < newArr.length; j++){
+        //iterate through newArr, splice, reverse and join first k items then concatenate remaining items in the array 
         answer = `${answer}${newArr[j].splice(0,k).reverse().join('')}${newArr[j].splice(0).join('')}` 
     }
 
