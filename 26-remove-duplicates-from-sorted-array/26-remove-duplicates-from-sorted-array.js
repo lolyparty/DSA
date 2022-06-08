@@ -10,6 +10,6 @@ var removeDuplicates = function(nums) {
          }
      }
     
-    nums.splice(0, repeatedNums.length, ...repeatedNums)
+    nums.unshift(...repeatedNums)
     return repeatedNums.length
 };
