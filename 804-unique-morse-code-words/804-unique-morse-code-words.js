@@ -39,14 +39,12 @@ var uniqueMorseRepresentations = function(words) {
             let curWord = words[i].split('')
             for(let j = 0; j < curWord.length; j++){
                 wordMorseCode = `${wordMorseCode}${morseCode[curWord[j]]}`
-                wordMorseCode = wordMorseCode.trim()
+                // wordMorseCode = wordMorseCode.trim()
             }
             if(wordMorseCodeArr.indexOf(wordMorseCode) === -1){
                     wordMorseCodeArr.push(wordMorseCode)
                 }
-            wordMorseCode = ''
-            
-            
+            wordMorseCode = ''            
         }
         return wordMorseCodeArr.length
     }
