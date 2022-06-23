@@ -6,11 +6,8 @@ var isPalindrome = function(s) {
     let newArr = [];
     s = s.split('')
     for(let i = 0; i < s.length; i++){
-        if(s[i].toUpperCase() !== s[i].toLowerCase() && s[i] !== ' '){
-            newArr.push(s[i].toLowerCase())
-        } else if(!isNaN(parseInt(s[i]) && s[i] !== ' ')){
-            newArr.push(s[i])
-        } 
+        s[i].toUpperCase() !== s[i].toLowerCase() && s[i] !== ' ' ? newArr.push(s[i].toLowerCase()) : !isNaN(parseInt(s[i]) && s[i] !== ' ') ?
+                                                                    newArr.push(s[i]) : null;
     }
 
     return newArr.join('') === newArr.reverse().join('');
