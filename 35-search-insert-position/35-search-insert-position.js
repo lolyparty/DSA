@@ -6,15 +6,22 @@
 var searchInsert = function(nums, target) {
     if(nums.indexOf(target) > -1){
         return nums.indexOf(target)
-    } else if(target - nums[nums.length - 1] >= 1){
-        return nums.length
+    } else if(target - nums[nums.length -1] >= 1){
+        return nums.length;
     }
-    
-    for(let i = 0; i < nums.length; i++){
-        if((target - nums[i]) <= 0){
-            return i
+
+    //using binary search for position
+    let start = 0;
+    let end = nums.length - 1;
+    while (start <= end){
+        let mid = Math.floor((start + end)/2);
+        if(nums[mid] === target) return mid;
+        else if(nums[mid] > target){
+            end = mid - 1;
+        } else if(nums[mid] < target){
+            start = mid + 1;
         }
     }
-    
+    return start;
     
 };
